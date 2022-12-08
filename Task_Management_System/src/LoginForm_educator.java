@@ -223,7 +223,7 @@ public class LoginForm_educator extends javax.swing.JFrame {
             if (rs.next()) {
 
                 JOptionPane.showMessageDialog(null, "Login Successfully", "Login Success", 1);
-                new Student_task().setVisible(true);
+                new Educator_Dashboard().setVisible(true);
 
                 this.dispose();
 
