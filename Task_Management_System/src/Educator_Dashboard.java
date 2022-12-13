@@ -96,6 +96,11 @@ public class Educator_Dashboard extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(117, 98, 122));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Vector (2).png"))); // NOI18N
         jLabel1.setText("Scholars");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -341,6 +346,10 @@ dispose();
         S.setVisible(true);
         dispose();
     }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+
+    }//GEN-LAST:event_jLabel1MouseClicked
 
      public boolean checkEmail(String email) {
         PreparedStatement ps;

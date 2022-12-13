@@ -89,6 +89,11 @@ public class LoginForm_student extends javax.swing.JFrame {
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(117, 98, 122));
         jCheckBox1.setText("Show Password");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         password.setBackground(new java.awt.Color(211, 212, 241));
         password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(117, 98, 122)));
@@ -226,9 +231,8 @@ public class LoginForm_student extends javax.swing.JFrame {
 
             if (rs.next()) {
 
-                JOptionPane.showMessageDialog(null, "Login Successfull", "Login Success", 1);
-                new Register_student().setVisible(true);
-
+                JOptionPane.showMessageDialog(null, "Login Successfully", "Login Success", 1);
+//                new Register_student().setVisible(true);
                 this.dispose();
 
             } else {
@@ -252,6 +256,14 @@ public class LoginForm_student extends javax.swing.JFrame {
         lp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+          if (jCheckBox1.isSelected()) {
+            password.setEchoChar((char) 0);
+        } else {
+            password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments

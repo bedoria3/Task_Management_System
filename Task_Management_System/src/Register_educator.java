@@ -12,7 +12,6 @@ import javax.swing.JFrame;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Student.Admin
@@ -25,7 +24,7 @@ public class Register_educator extends javax.swing.JFrame {
     public Register_educator() {
         initComponents();
         this.setTitle("Educator's Registration Form");
-        
+
     }
 
     /**
@@ -37,6 +36,7 @@ public class Register_educator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         firstname = new javax.swing.JTextField();
@@ -55,8 +55,10 @@ public class Register_educator extends javax.swing.JFrame {
         birthdate = new com.toedter.calendar.JDateChooser();
         jLabel9 = new javax.swing.JLabel();
         age = new javax.swing.JTextField();
-        sex = new javax.swing.JComboBox<>();
         passwordfield = new javax.swing.JPasswordField();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        male = new javax.swing.JRadioButton();
+        female = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -138,57 +140,81 @@ public class Register_educator extends javax.swing.JFrame {
         age.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         age.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(117, 98, 122)));
 
-        sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
-        sex.setName("Male, Female"); // NOI18N
+        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jCheckBox1.setText("Show Password");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(male);
+        male.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        male.setText("Male");
+
+        buttonGroup1.add(female);
+        female.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        female.setText("Female");
+        female.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                femaleActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(birthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(firstname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(114, 114, 114))
-                            .addComponent(lastname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
-                            .addComponent(address, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
-                            .addComponent(sex, 0, 251, Short.MAX_VALUE)
-                            .addComponent(passwordfield))))
+                        .addGap(57, 57, 57)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(birthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
+                                    .addComponent(address, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
+                                    .addComponent(passwordfield)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(male, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(female, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addeducatorbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(firstname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jLabel2)
+                                            .addGap(114, 114, 114))
+                                        .addComponent(lastname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(55, 55, 55))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(addeducatorbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -206,10 +232,12 @@ public class Register_educator extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(male)
+                        .addComponent(female)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,13 +250,15 @@ public class Register_educator extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(passwordfield, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(addeducatorbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBox1)
+                .addGap(18, 18, 18)
+                .addComponent(addeducatorbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(210, 10, 520, 520);
+        jPanel2.setBounds(210, 10, 520, 570);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image 1.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -255,21 +285,23 @@ public class Register_educator extends javax.swing.JFrame {
     }//GEN-LAST:event_firstnameActionPerformed
 
     private void addeducatorbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addeducatorbuttonActionPerformed
-//        String status = "Inactive";
         String fnames = firstname.getText();
         String lnames = lastname.getText();
-           SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
         String bdate = dateformat.format(birthdate.getDate());
         String uage = age.getText();
-        String usex = String.valueOf(sex.getSelectedItem());
+        String sex = null;
+        if (male.isSelected()) {
+            sex = "Male";
+        }
+        if (female.isSelected()) {
+            sex = "Female";
+        }
         String uaddress = address.getText();
         String emails = email.getText();
-        String pass = String.valueOf(passwordfield.getPassword());
-     
+        String pass = passwordfield.getText();
 
-        
-
-         if (fnames.isEmpty() || lnames.isEmpty() || emails.isEmpty() || pass.isEmpty()){
+        if (fnames.isEmpty() || lnames.isEmpty() || emails.isEmpty() || pass.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required", "Invalid Login", JOptionPane.ERROR_MESSAGE);
         } else if (checkEmail(emails)) {
             JOptionPane.showMessageDialog(null, "This Email has Already Exist");
@@ -286,18 +318,23 @@ public class Register_educator extends javax.swing.JFrame {
                     ps.setString(2, lnames);
                     ps.setString(3, bdate);
                     ps.setString(4, uage);
-                    ps.setString(5, usex);
+                    ps.setString(5, sex);
                     ps.setString(6, uaddress);
                     ps.setString(7, emails);
-                     ps.setString(8, pass);
-           
+                    ps.setString(8, pass);
 
                     if (ps.executeUpdate() > 0) {
                         JOptionPane.showMessageDialog(null, "You've successfully registered!");
+                        firstname.setText("");
+                        lastname.setText("");
+                        age.setText("");
+                        buttonGroup1.clearSelection();
+                        address.setText("");
+                        email.setText("");
+                        passwordfield.setText("");
+                        birthdate.setDate(null);
                     }
-//                    Home w = new Home();
-//                    w.setVisible(true);
-//                    this.dispose();
+//                   
 
                 } catch (SQLException ex) {
                     System.out.println("Error : " + ex.getMessage());
@@ -306,7 +343,19 @@ public class Register_educator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addeducatorbuttonActionPerformed
 
-     public boolean checkEmail(String email) {
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        if (jCheckBox1.isSelected()) {
+            passwordfield.setEchoChar((char) 0);
+        } else {
+            passwordfield.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_femaleActionPerformed
+
+    public boolean checkEmail(String email) {
         PreparedStatement ps;
         ResultSet rs;
         boolean checkEmail = false;
@@ -329,6 +378,7 @@ public class Register_educator extends javax.swing.JFrame {
         return checkEmail;
 
     }
+
     /**
      * @param args the command line arguments
      */
@@ -359,7 +409,7 @@ public class Register_educator extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Register_student().setVisible(true);
+                new Register_educator().setVisible(true);
             }
         });
     }
@@ -369,8 +419,11 @@ public class Register_educator extends javax.swing.JFrame {
     private javax.swing.JTextField address;
     private javax.swing.JTextField age;
     private com.toedter.calendar.JDateChooser birthdate;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField email;
+    private javax.swing.JRadioButton female;
     private javax.swing.JTextField firstname;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -384,7 +437,7 @@ public class Register_educator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField lastname;
+    private javax.swing.JRadioButton male;
     private javax.swing.JPasswordField passwordfield;
-    private javax.swing.JComboBox<String> sex;
     // End of variables declaration//GEN-END:variables
 }
