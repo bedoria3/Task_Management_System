@@ -194,11 +194,11 @@ public class Progress extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(970, 10, 72, 24);
+        jButton2.setBounds(970, 10, 63, 27);
 
         jScrollPane1.setOpaque(false);
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(270, 150, 730, 450);
+        jScrollPane1.setBounds(270, 150, 730, 400);
 
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image 1.png"))); // NOI18N
         getContentPane().add(back);

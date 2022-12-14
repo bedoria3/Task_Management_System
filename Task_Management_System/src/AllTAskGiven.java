@@ -186,10 +186,7 @@ public class AllTAskGiven extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(0, 204, 51));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID", "Project Title", "Title 3", "Title 4"
@@ -227,7 +224,7 @@ public class AllTAskGiven extends javax.swing.JFrame {
 
         jButton1.setText("ADD NEW PROJECT");
         getContentPane().add(jButton1);
-        jButton1.setBounds(860, 80, 150, 24);
+        jButton1.setBounds(860, 80, 150, 27);
 
         jButton2.setText("BACK");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -241,7 +238,7 @@ public class AllTAskGiven extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(970, 10, 72, 24);
+        jButton2.setBounds(970, 10, 63, 27);
 
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image 1.png"))); // NOI18N
         getContentPane().add(back);
