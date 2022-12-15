@@ -224,12 +224,17 @@ public class AllTAskGiven extends javax.swing.JFrame {
 
         jButton1.setText("ADD NEW PROJECT");
         getContentPane().add(jButton1);
-        jButton1.setBounds(860, 80, 150, 27);
+        jButton1.setBounds(860, 80, 150, 24);
 
         jButton2.setText("BACK");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
         jButton2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -238,7 +243,7 @@ public class AllTAskGiven extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(970, 10, 63, 27);
+        jButton2.setBounds(970, 10, 72, 24);
 
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image 1.png"))); // NOI18N
         getContentPane().add(back);
@@ -273,10 +278,14 @@ dispose();        // TODO add your handling code here:
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-         Scholars S = new Scholars();
-        S.setVisible(true);
-        dispose();
+       Educator_ViewScholars scholar = new Educator_ViewScholars();
+        scholar.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

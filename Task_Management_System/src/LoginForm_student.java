@@ -118,7 +118,7 @@ public class LoginForm_student extends javax.swing.JFrame {
                     .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(62, 188, Short.MAX_VALUE)
+                .addContainerGap(188, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -143,9 +143,9 @@ public class LoginForm_student extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addGap(28, 28, 28)
                 .addComponent(jCheckBox1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(addscholarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(42, 42, 42))
         );
 
         jPanel1.add(jPanel2);
@@ -230,10 +230,15 @@ public class LoginForm_student extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery(sql);
 
             if (rs.next()) {
-
+            
                 JOptionPane.showMessageDialog(null, "Login Successfully", "Login Success", 1);
 //                new Register_student().setVisible(true);
+                   AllTAskGiven ATG = new AllTAskGiven();
+                   ATG.pack();
+                ATG.setVisible(true);
+
                 this.dispose();
+                
 
             } else {
                 JOptionPane.showMessageDialog(null, "Incorrect Username Or Password", "Login Failed", 2);
@@ -258,7 +263,7 @@ public class LoginForm_student extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-          if (jCheckBox1.isSelected()) {
+        if (jCheckBox1.isSelected()) {
             password.setEchoChar((char) 0);
         } else {
             password.setEchoChar('*');

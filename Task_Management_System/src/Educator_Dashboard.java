@@ -334,9 +334,7 @@ public class Educator_Dashboard extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-         Scholars S = new Scholars();
-        S.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void scholarsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scholarsMouseClicked

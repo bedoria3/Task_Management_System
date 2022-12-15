@@ -217,13 +217,17 @@ public class Progress extends javax.swing.JFrame {
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
+        
+         Educator_Dashboard scholar = new Educator_Dashboard();
+        scholar.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
-         Scholars S = new Scholars();
-        S.setVisible(true);
-        dispose();
+        Educator_ViewScholars scholar = new Educator_ViewScholars();
+        scholar.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
